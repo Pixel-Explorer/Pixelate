@@ -1,0 +1,1553 @@
+<!DOCTYPE HTML>
+  <html lang="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+    <script src="hero.1.0.0.js"></script>
+    <script src="fusion.1.0.0.js"></script>
+    </head>
+  <body>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .hero-element {
+    position: absolute;
+  }
+  .fusion--player {
+    background-color: #fff;
+  }
+  
+  
+        #guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_a6646d8c_40b9_4431_84de_2683c0ce386b {
+  width: 1364px;
+  height: 1033px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 407, 24);
+  background-color: #e9f4fe;
+}
+#guid_f4d22574_dadb_4380_9ef3_3fa4cbbf38dd {
+  width: 0px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 400, 0);
+  pointer-events: none;
+}
+#guid_fc5ca091_2537_4df8_94b7_444530d947a8 {
+  width: 384px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 16, 335);
+  pointer-events: none;
+}
+#guid_4a70c715_5eb6_4b55_88ad_a30555526c20 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 11.5, -272);
+}
+#guid_c717fd6c_21cf_4646_a1dd_6b0d5f639306 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -16, 294.5);
+}
+#guid_3ff2c12d_f9f3_4ea4_a6ba_35c2aff3e9b5 {
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 85, 55);
+  background-color: #458ccb;
+  border: 4px solid #0e0f10;
+}
+#guid_f175c350_6346_4929_8f45_a016ee8ece77 {
+  width: 50px;
+  height: 50px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 85, 151);
+  background-color: #458ccb;
+  border: 4px solid #0e0f10;
+}
+#guid_3e120284_7089_4906_8929_52d25c7eaff2 {
+  width: 205px;
+  font-family: Cy;
+  font-size: 50px;
+  color: #0e0f10;
+  font-weight: 900;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 122, 441.5);
+}
+#guid_b6ef2f45_44e2_4d38_83e8_5f88948a6d7c {
+  width: 258px;
+  font-family: Cy;
+  font-size: 23.5px;
+  color: #0e0f10;
+  font-weight: 300;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 69, 493.5);
+}
+#guid_56ea9e45_6ced_4f79_88a2_acf3cd9933f0 {
+  width: 426px;
+  height: 89px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 876, 496);
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px 8px 8px 8px;
+}
+#guid_413858bd_8c4b_4cee_8bca_010e533ba2fc {
+  width: 274px;
+  font-family: Poppins;
+  font-size: 52px;
+  color: #458ccb;
+  text-align: center;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 954, 504);
+}
+#guid_f58ff225_6759_4477_8eb3_ced6b02fe7b2 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_2811daa4_ece8_49da_b477_6a5eb05d7d95 {
+  width: 376px;
+  font-family: Poppins;
+  font-size: 23.5px;
+  color: #0e0f10;
+  font-weight: 800;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 369.5);
+}
+#guid_707a55fc_87fb_4b5f_99fb_6171f830c1c1 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 451);
+}
+#guid_0c898049_8d9a_4a2d_a8ba_a42d0bee3006 {
+  width: 59px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_52424c7d_2b5d_406c_aa26_aa028c24da0c {
+  width: 198px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_9243a862_ff25_43c5_b9a6_dcc9f40d0589 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 512.9999389648438);
+}
+#guid_fc61e467_4ff5_4317_8aaa_2dbdb256bb2e {
+  width: 62px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_32acad53_2e8d_48da_9b47_a7d48c42e721 {
+  width: 305px;
+  height: 49px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_efaa5139_6575_4b63_9ec2_a6e1fbb451f1 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 781.0001220703125);
+}
+#guid_f18b27ec_470e_4e27_aaa8_ef10c7507194 {
+  width: 63px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_f77c9801_4432_49fa_b96c_0da34f6727e8 {
+  width: 305px;
+  height: 47px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_bed8258a_af0b_4fcd_9db8_6c4efbf98157 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 867.9998168945312);
+}
+#guid_de99474d_0080_404d_9ce4_fa17db32c55b {
+  width: 64px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_c7ce3833_772f_48f3_ace1_e65febc7b4a6 {
+  width: 77px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_db4d0b42_2810_4b4f_8d2e_c641429ec2df {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 930);
+}
+#guid_bed2059b_de63_4274_9bdc_ecd68edf98ea {
+  width: 102px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_c137e822_0326_4f1b_92fc_2c3b8ca72e71 {
+  width: 262px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_b14a1e3a_60b7_40c8_b177_f52da4ee4c08 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 598.9998779296875);
+}
+#guid_ee5f322c_d055_4216_a87a_29f1891dbe17 {
+  width: 46px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_f546c46e_08b1_4093_af30_95cf855cf638 {
+  width: 349px;
+  height: 143px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_a10393d6_b61c_4499_892b_ec60f40cfaf4 {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: #fff;
+}
+#guid_53ea43d8_975c_442e_b617_323960367884 {
+  width: 0px;
+  height: 1080px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 400, 0);
+  pointer-events: none;
+}
+#guid_398235b9_93f1_447a_a0e5_4c06abefc7ed {
+  width: 384px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 16, 335);
+  pointer-events: none;
+}
+#guid_584ec4b2_5a67_4e3f_85cc_6658c86fb847 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 11.5, -272);
+}
+#guid_4d693b02_6a17_4ce0_a84a_83cba0cc0150 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -16, 294.5);
+}
+#guid_93e8860c_c8bd_45f7_9711_c8a52bc4dc16 {
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 85, 55);
+  background-color: #458ccb;
+  border: 4px solid #0e0f10;
+}
+#guid_7621de3e_e6d0_4566_b878_9ee4c1024e36 {
+  width: 50px;
+  height: 50px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 85, 151);
+  background-color: #458ccb;
+  border: 4px solid #0e0f10;
+}
+#guid_80e2b3f8_fe99_4fb4_b80a_79daab69a1f2 {
+  width: 205px;
+  font-family: Cy;
+  font-size: 50px;
+  color: #0e0f10;
+  font-weight: 900;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 122, 441.5);
+}
+#guid_b8bbda0c_56cd_4c00_ada4_965146d81797 {
+  width: 258px;
+  font-family: Cy;
+  font-size: 23.5px;
+  color: #0e0f10;
+  font-weight: 300;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 69, 493.5);
+}
+#guid_182cddb2_d898_405b_98d6_d866e2307b29 {
+  width: 1474px;
+  height: 1033px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 416, 24);
+  background-color: #e9f4fe;
+  border-radius: 16px 16px 16px 16px;
+}
+#guid_016ce75d_f436_45b9_ace4_85ba9ff6aa6d {
+  width: 853px;
+  height: 121px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 987, 54);
+  background-color: #fff;
+}
+#guid_71e31a4c_3a36_49b5_88fd_306c14524142 {
+  width: 210px;
+  font-family: Cy;
+  font-size: 45px;
+  color: #0e0f10;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1010, 110);
+}
+#guid_03ab2f55_63ea_4bd7_b679_574458c3aa6f {
+  width: 156px;
+  font-family: Cy;
+  font-size: 25px;
+  color: #458ccb;
+  font-weight: 400;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1010, 71);
+}
+#guid_53d78f8a_1d95_4818_9b57_c2712e292896 {
+  width: 853px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 987, 175);
+  pointer-events: none;
+}
+#guid_e00e577f_bd14_4964_a906_66fa07010683 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 26px;
+  color: #0e0f10;
+  font-weight: 800;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 460);
+}
+#guid_cf7f9d11_4473_40d0_a07b_c4a1ed2be31a {
+  width: 335px;
+  font-family: Poppins;
+  font-size: 26px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 993, 744);
+}
+#guid_44d0605b_7f95_4844_86a7_008d064286d4 {
+  width: 335px;
+  font-family: Poppins;
+  font-size: 26px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 993, 880);
+}
+#guid_e6469d53_0646_47f6_8f3b_048239865012 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 526);
+}
+#guid_ae077508_9e8f_438c_893b_b4f58d46aff2 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_4df7c24c_d021_48ce_9e87_f62f24db3471 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_e0321cf6_f75b_472d_a14e_2caa163ad049 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_ed156a13_573a_4b57_9e81_b2284f4cc62e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 593);
+}
+#guid_c755d49b_09c1_462e_bee6_becffa69446b {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_50634b48_3270_48d4_afc1_3447607cc17c {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_eb55b924_4b11_4044_9aa3_5be9a7f299da {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_86645abd_63d5_4b7c_aeff_12b0c81992e6 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 660);
+}
+#guid_cb027067_038e_45c5_8be3_b2d6c3039a40 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_a23c34c4_20bc_4177_a2a4_01e950cd0b1f {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_66814639_1c2b_48c9_b033_08cd69e60e5e {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_a80422f1_175a_4038_ac9a_b4590d49e59e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 727);
+}
+#guid_92acc10c_e6b4_4bbd_a825_82a732286950 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_33263144_3fa6_469c_bdaf_6fe0e0a44cd5 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_262c59e8_f48b_4f73_8432_a981324713e2 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_c79ef1eb_bba0_477f_881d_0fe6440d0a4d {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 794);
+}
+#guid_7fe27332_11e1_4fe6_a3c3_dcd073814044 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_6d70ecb4_8e02_4018_a444_8869d87aedcc {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_da6b366b_026f_42fe_aefc_07bcded3d404 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_6d675a0e_68d1_44be_a5fc_b9b1a889d001 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 54);
+}
+#guid_98e37fb0_dd7c_437d_986d_d4688c02a63e {
+  width: 506px;
+  height: 376px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_0bfe9450_6ac1_41b6_8897_1e409c941b98 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 214.88702392578125, 157.23394775390625);
+}
+#guid_bbc05bad_f1c7_400b_b09c_dbb8e6f5d53c {
+  width: 77.68903350830078px;
+  height: 63.33300018310547px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_6cab54ee_136e_43b9_8a7c_f66104ad64a9 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 861);
+}
+#guid_2b41c97f_c704_4ddc_8f60_02027bc6d182 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_ab6cc211_86ab_4db6_974b_8a418aa5adbd {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_c22d57bd_8851_4e6a_a3f8_5a54d32a431f {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_443b5b9c_31a5_482e_a41c_eb4d6c3cbe9a {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 454, 928);
+}
+#guid_27feec25_5fb7_45ff_8680_7b2b5b177c02 {
+  width: 506px;
+  height: 0px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 59);
+  pointer-events: none;
+}
+#guid_6895f64e_84ef_42c9_9726_83d191cf2721 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 0);
+}
+#guid_3bc8c293_cfbb_440f_99ed_3617a02ca507 {
+  width: 245px;
+  font-family: Poppins;
+  font-size: 20px;
+  color: #458ccb;
+  font-weight: 700;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 30, 23);
+}
+#guid_d7730e4e_43a4_4a72_9557_bb792c20bef2 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 988, 223);
+}
+#guid_77609e83_2d2c_4ca9_bd87_d5cc016c9f5d {
+  width: 852px;
+  height: 474px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_add9e698_2743_4add_b66a_d68ff5918a37 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 291.689208984375, 186.049560546875);
+}
+#guid_f4f2edd6_a0b4_47d2_996f_e3479ce45582 {
+  width: 49.99949645996094px;
+  height: 64.98719787597656px;
+  transform-origin: 50% 50%;
+  transform: translate(0px, 0px);
+}
+#guid_a04b2fcb_8265_4f01_aabb_f4f134935dd5 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -14, -3893);
+}
+#guid_c10842af_0acf_4404_928b_a5a611cba464 {
+  width: 80px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1007, 4685);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_799b7de4_035c_446a_b2b5_86475f5d3d46 {
+  width: 67px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1015, 4693.5);
+}
+#guid_e48526a6_9859_463a_9810_85939604cbe4 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, -14, -3893);
+}
+#guid_70c4df40_fb60_44a8_ae06_18b67bcb997f {
+  width: 43px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1103, 4685);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_bbfed187_fb95_4db4_90cf_5efa16a07f0c {
+  width: 30px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1111, 4693.5);
+}
+#guid_f99ea00e_53c2_450a_baed_93634f049ad5 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 82, -3949);
+}
+#guid_feb84ecd_bfbd_47ef_8b21_aaee7d601d95 {
+  width: 70px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1066, 4741);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_dc641e6b_93c3_4338_bcf4_19de18b76e88 {
+  width: 57px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1074, 4749.5);
+}
+#guid_d2c8aba4_acf8_417a_9491_0d8bba4bf2f1 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 82, -3949);
+}
+#guid_d9705e49_6918_4ab9_834b_bb6be47620fb {
+  width: 40px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1152, 4741);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_521122c0_f29e_4277_a432_11ff524c1e2f {
+  width: 27px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1160, 4749.5);
+}
+#guid_af56aaad_d71c_495d_bcaa_89c601940d49 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 297, -4008.5);
+}
+#guid_22d21c85_cd6b_42ec_a2c5_770d106e1b85 {
+  width: 71px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 993, 4800.5);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_25bdc607_5b6f_42cf_9110_276308860ef9 {
+  width: 58px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1001, 4809);
+}
+#guid_b698817d_799c_4fa8_a026_cd4a6f8334b9 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 169, -3949);
+}
+#guid_0c91921e_ccb7_4b8c_88ff_6657204f50e6 {
+  width: 47px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1208, 4741);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_6bc0abb7_5229_4986_bdb5_1b4635787b16 {
+  width: 34px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1216, 4749.5);
+}
+#guid_edf5145d_25a7_49fb_b024_11029bf60fe0 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 114, -3949);
+}
+#guid_11fdffdf_5903_4881_9049_ab0438ab4348 {
+  width: 103px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1326, 4741);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_caead300_6779_4b25_9386_683d9e035840 {
+  width: 90px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1334, 4749.5);
+}
+#guid_019b24c2_6410_40fa_b6e4_8226e0c4cf9b {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 241, -4008.5);
+}
+#guid_378759fd_4d37_4bef_aca5_ac39a9dd81f4 {
+  width: 68px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1318, 4800.5);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_6a92ec8b_8163_4a58_b47e_7c32ca70dbb1 {
+  width: 55px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1326, 4809);
+}
+#guid_19955d57_96b9_4f61_adc6_b0ac1843ca45 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 2, -4008.5);
+}
+#guid_c9445e0d_8f06_415e_b1bf_e40b655fe721 {
+  width: 75px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1641, 4800.5);
+  background-color: #458ccb;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_74c99bd2_7f13_4987_a3ea_0dd7c945ecaa {
+  width: 62px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #e9f4fe;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1649, 4809);
+}
+#guid_f7f70550_951c_4d31_8d1d_3e4c8b3e8cf2 {
+  width: 852px;
+  height: 40px;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 993, 928);
+  background-color: #e9f4fe;
+  border: 1px solid #0e0f10;
+  border-radius: 4px 4px 4px 4px;
+}
+#guid_edc3dd45_20e5_4049_89cf_42fa662c305c {
+  width: 834px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 1001, 936.5);
+}
+#guid_7ce7afaa_93f7_462a_88db_1bfe646a3be6 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#guid_240d50a4_8379_4475_9f8b_a854a83746fa {
+  width: 376px;
+  font-family: Poppins;
+  font-size: 23.5px;
+  color: #0e0f10;
+  font-weight: 800;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 369.5);
+}
+#guid_cba9094e_1113_4b8f_9957_f23760ba63b3 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 451);
+}
+#guid_4b99d443_423a_442a_a8a9_53c7f60549dc {
+  width: 59px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_56ffcc5b_a1b9_43f9_9b21_8c1a46171bf7 {
+  width: 198px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_ff7820c7_c9f1_4035_99fe_5f2a34e4e04e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 512.9999389648438);
+}
+#guid_1236fce3_b665_4941_b38e_a747a8954adc {
+  width: 62px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_5fdbb42d_4440_438d_b858_a20fa05af4a8 {
+  width: 305px;
+  height: 49px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_82765b61_9456_4640_9917_4a8bdff339d1 {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 781.0001220703125);
+}
+#guid_c36a19d9_a776_41d0_83a0_d07fd837b6bf {
+  width: 63px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_bdc9e932_a37a_4da4_83b7_b9b2f83dca21 {
+  width: 305px;
+  height: 47px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_18f1d236_c23e_4180_9554_04bb7db1675c {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 867.9998168945312);
+}
+#guid_868223a3_a7ae_462c_a0b2_982f3509b87f {
+  width: 64px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_d40c1e59_06ce_45c1_83a1_a1ab6810ac5d {
+  width: 77px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_51f65a7b_0387_44ae_820d_fc3f73300d7a {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 930);
+}
+#guid_71a0b3bc_cbd0_459b_86ee_a9be5a1dcc47 {
+  width: 102px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_f5e1ee98_1a47_412f_b10f_5138e058198d {
+  width: 262px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+#guid_714d9e11_079e_4cc4_96c6_9f75f7151b9e {
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 23, 598.9998779296875);
+}
+#guid_12cc4a11_0f17_41a0_95da_e5228c3a317f {
+  width: 46px;
+  height: 23px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #0e0f10;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, -1);
+}
+#guid_8516d615_845a_4a85_8530_296e0eb3209a {
+  width: 349px;
+  height: 143px;
+  font-family: Poppins;
+  font-size: 16px;
+  color: #458ccb;
+  font-weight: 500;
+  transform-origin: 50% 50%;
+  transform: matrix(1, 0, 0, 1, 12, 22);
+}
+
+      
+
+  </style>
+
+  
+
+        <!-- /////////////////////// -->
+        <!-- Player -->
+        <div class="wrapper" style="position: relative; width: 100%; height: 100%;">
+          <div id="player" class="fusion--player" style="width: 100%; height: 100%; ">
+            <div class="fusion--viewport">
+            
+            
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9">
+              <div class="fusion--scene--content">
+                
+<div id="guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9" class="artboard scene" >
+<div id="guid_a6646d8c_40b9_4431_84de_2683c0ce386b" class="hero-element" >
+</div>
+<div id="guid_f4d22574_dadb_4380_9ef3_3fa4cbbf38dd" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_f4d22574_dadb_4380_9ef3_3fa4cbbf38dd-line"
+              x1="0" y1="0" x2="0" y2="1080"
+              
+              stroke-width="4"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_fc5ca091_2537_4df8_94b7_444530d947a8" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_fc5ca091_2537_4df8_94b7_444530d947a8-line"
+              x1="0" y1="0" x2="384" y2="0"
+              stroke="#000"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_4a70c715_5eb6_4b55_88ad_a30555526c20" class="hero-element" >
+<div id="guid_c717fd6c_21cf_4646_a1dd_6b0d5f639306" class="hero-element" >
+<div id="guid_3ff2c12d_f9f3_4ea4_a6ba_35c2aff3e9b5" class="hero-element" >
+</div>
+<div id="guid_f175c350_6346_4929_8f45_a016ee8ece77" class="hero-element" >
+</div>
+</div>
+<div id="guid_3e120284_7089_4906_8929_52d25c7eaff2" class="hero-element" >Pixelate
+</div>
+<div id="guid_b6ef2f45_44e2_4d38_83e8_5f88948a6d7c" class="hero-element" >a spacetime company
+</div>
+</div>
+<div id="guid_56ea9e45_6ced_4f79_88a2_acf3cd9933f0" class="hero-element" >
+</div>
+<div id="guid_413858bd_8c4b_4cee_8bca_010e533ba2fc" class="hero-element" >Upload
+</div>
+<div id="guid_f58ff225_6759_4477_8eb3_ced6b02fe7b2" class="hero-element" >
+<div id="guid_2811daa4_ece8_49da_b477_6a5eb05d7d95" class="hero-element" >Guide to Application
+</div>
+<div id="guid_707a55fc_87fb_4b5f_99fb_6171f830c1c1" class="hero-element" >
+<div id="guid_0c898049_8d9a_4a2d_a8ba_a42d0bee3006" class="hero-element" >Step 1 : 
+</div>
+<div id="guid_52424c7d_2b5d_406c_aa26_aa028c24da0c" class="hero-element" >Allow Gallery permission
+</div>
+</div>
+<div id="guid_9243a862_ff25_43c5_b9a6_dcc9f40d0589" class="hero-element" >
+<div id="guid_fc61e467_4ff5_4317_8aaa_2dbdb256bb2e" class="hero-element" >Step 2 : 
+</div>
+<div id="guid_32acad53_2e8d_48da_9b47_a7d48c42e721" class="hero-element" >Upload an photograph with GPS data available
+</div>
+</div>
+<div id="guid_efaa5139_6575_4b63_9ec2_a6e1fbb451f1" class="hero-element" >
+<div id="guid_f18b27ec_470e_4e27_aaa8_ef10c7507194" class="hero-element" >Step 3 : 
+</div>
+<div id="guid_f77c9801_4432_49fa_b96c_0da34f6727e8" class="hero-element" >Tag the photograph with appropriate hashtags
+</div>
+</div>
+<div id="guid_bed8258a_af0b_4fcd_9db8_6c4efbf98157" class="hero-element" >
+<div id="guid_de99474d_0080_404d_9ce4_fa17db32c55b" class="hero-element" >Step 4 : 
+</div>
+<div id="guid_c7ce3833_772f_48f3_ace1_e65febc7b4a6" class="hero-element" >Mint NsFT
+</div>
+</div>
+<div id="guid_db4d0b42_2810_4b4f_8d2e_c641429ec2df" class="hero-element" >
+<div id="guid_bed2059b_de63_4274_9bdc_ecd68edf98ea" class="hero-element" >Marketplace
+</div>
+<div id="guid_c137e822_0326_4f1b_92fc_2c3b8ca72e71" class="hero-element" >View minted NsFTs and their info
+</div>
+</div>
+<div id="guid_b14a1e3a_60b7_40c8_b177_f52da4ee4c08" class="hero-element" >
+<div id="guid_ee5f322c_d055_4216_a87a_29f1891dbe17" class="hero-element" >Note :
+</div>
+<div id="guid_f546c46e_08b1_4093_af30_95cf855cf638" class="hero-element" >Preferred themes of photographs : Street, outdoor, sky, building, architecture, clouds, <br/>night, portrait, wildlife, food, café, nature, <br/>landscape, indoor, home, b/w, sunset, <br/>sunrise, water, river, beach, hill, mountains, <br/>road and human
+</div>
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            
+            <div class="fusion--scene fusion--scene--default scene-guid_a10393d6_b61c_4499_892b_ec60f40cfaf4">
+              <div class="fusion--scene--content">
+                
+<div id="guid_a10393d6_b61c_4499_892b_ec60f40cfaf4" class="artboard scene" >
+<div id="guid_53ea43d8_975c_442e_b617_323960367884" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_53ea43d8_975c_442e_b617_323960367884-line"
+              x1="0" y1="0" x2="0" y2="1080"
+              
+              stroke-width="4"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_398235b9_93f1_447a_a0e5_4c06abefc7ed" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_398235b9_93f1_447a_a0e5_4c06abefc7ed-line"
+              x1="0" y1="0" x2="384" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_584ec4b2_5a67_4e3f_85cc_6658c86fb847" class="hero-element" >
+<div id="guid_4d693b02_6a17_4ce0_a84a_83cba0cc0150" class="hero-element" >
+<div id="guid_93e8860c_c8bd_45f7_9711_c8a52bc4dc16" class="hero-element" >
+</div>
+<div id="guid_7621de3e_e6d0_4566_b878_9ee4c1024e36" class="hero-element" >
+</div>
+</div>
+<div id="guid_80e2b3f8_fe99_4fb4_b80a_79daab69a1f2" class="hero-element" >Pixelate
+</div>
+<div id="guid_b8bbda0c_56cd_4c00_ada4_965146d81797" class="hero-element" >a spacetime company
+</div>
+</div>
+<div id="guid_182cddb2_d898_405b_98d6_d866e2307b29" class="hero-element" >
+</div>
+<div id="guid_016ce75d_f436_45b9_ace4_85ba9ff6aa6d" class="hero-element" >
+</div>
+<div id="guid_71e31a4c_3a36_49b5_88fd_306c14524142" class="hero-element" >John Doe
+</div>
+<div id="guid_03ab2f55_63ea_4bd7_b679_574458c3aa6f" class="hero-element" >Image Name
+</div>
+<div id="guid_53d78f8a_1d95_4818_9b57_c2712e292896" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_53d78f8a_1d95_4818_9b57_c2712e292896-line"
+              x1="0" y1="0" x2="853" y2="0"
+              stroke="#458ccb"
+              stroke-width="6"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_e00e577f_bd14_4964_a906_66fa07010683" class="hero-element" >Metadata
+</div>
+<div id="guid_cf7f9d11_4473_40d0_a07b_c4a1ed2be31a" class="hero-element" >Staked in Hashtag Pools
+</div>
+<div id="guid_44d0605b_7f95_4844_86a7_008d064286d4" class="hero-element" >NsFT Address
+</div>
+<div id="guid_e6469d53_0646_47f6_8f3b_048239865012" class="hero-element" >
+<div id="guid_ae077508_9e8f_438c_893b_b4f58d46aff2" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_ae077508_9e8f_438c_893b_b4f58d46aff2-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_4df7c24c_d021_48ce_9e87_f62f24db3471" class="hero-element" >Camera
+</div>
+<div id="guid_e0321cf6_f75b_472d_a14e_2caa163ad049" class="hero-element" >iPhone 6s
+</div>
+</div>
+<div id="guid_ed156a13_573a_4b57_9e81_b2284f4cc62e" class="hero-element" >
+<div id="guid_c755d49b_09c1_462e_bee6_becffa69446b" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_c755d49b_09c1_462e_bee6_becffa69446b-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_50634b48_3270_48d4_afc1_3447607cc17c" class="hero-element" >Time
+</div>
+<div id="guid_eb55b924_4b11_4044_9aa3_5be9a7f299da" class="hero-element" >2020:11:08 17:59:58
+</div>
+</div>
+<div id="guid_86645abd_63d5_4b7c_aeff_12b0c81992e6" class="hero-element" >
+<div id="guid_cb027067_038e_45c5_8be3_b2d6c3039a40" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_cb027067_038e_45c5_8be3_b2d6c3039a40-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_a23c34c4_20bc_4177_a2a4_01e950cd0b1f" class="hero-element" >Exposure Time
+</div>
+<div id="guid_66814639_1c2b_48c9_b033_08cd69e60e5e" class="hero-element" >1/175
+</div>
+</div>
+<div id="guid_a80422f1_175a_4038_ac9a_b4590d49e59e" class="hero-element" >
+<div id="guid_92acc10c_e6b4_4bbd_a825_82a732286950" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_92acc10c_e6b4_4bbd_a825_82a732286950-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_33263144_3fa6_469c_bdaf_6fe0e0a44cd5" class="hero-element" >Aperture Value
+</div>
+<div id="guid_262c59e8_f48b_4f73_8432_a981324713e2" class="hero-element" >2.2
+</div>
+</div>
+<div id="guid_c79ef1eb_bba0_477f_881d_0fe6440d0a4d" class="hero-element" >
+<div id="guid_7fe27332_11e1_4fe6_a3c3_dcd073814044" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_7fe27332_11e1_4fe6_a3c3_dcd073814044-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_6d70ecb4_8e02_4018_a444_8869d87aedcc" class="hero-element" >ISO
+</div>
+<div id="guid_da6b366b_026f_42fe_aefc_07bcded3d404" class="hero-element" >50
+</div>
+</div>
+<div id="guid_6d675a0e_68d1_44be_a5fc_b9b1a889d001" class="hero-element" >
+<img id="guid_98e37fb0_dd7c_437d_986d_d4688c02a63e" class="hero-element" src="guid_98e37fb0_dd7c_437d_986d_d4688c02a63e.jpg" >
+
+<div id="guid_0bfe9450_6ac1_41b6_8897_1e409c941b98" class="hero-element" >
+<img id="guid_bbc05bad_f1c7_400b_b09c_dbb8e6f5d53c" class="hero-element" src="guid_bbc05bad_f1c7_400b_b09c_dbb8e6f5d53c.png" >
+
+</div>
+</div>
+<div id="guid_6cab54ee_136e_43b9_8a7c_f66104ad64a9" class="hero-element" >
+<div id="guid_2b41c97f_c704_4ddc_8f60_02027bc6d182" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_2b41c97f_c704_4ddc_8f60_02027bc6d182-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_ab6cc211_86ab_4db6_974b_8a418aa5adbd" class="hero-element" >GPS Latitude
+</div>
+<div id="guid_c22d57bd_8851_4e6a_a3f8_5a54d32a431f" class="hero-element" >21 deg 17' 6.10" N
+</div>
+</div>
+<div id="guid_443b5b9c_31a5_482e_a41c_eb4d6c3cbe9a" class="hero-element" >
+<div id="guid_27feec25_5fb7_45ff_8680_7b2b5b177c02" class="hero-element" >
+      <svg width="300" height="300" style="overflow: visible; position: absolute; left: 0px; top: 0px; pointer-events: none;">
+        <line id="guid_27feec25_5fb7_45ff_8680_7b2b5b177c02-line"
+              x1="0" y1="0" x2="506" y2="0"
+              stroke="#0e0f10"
+              stroke-width="2"
+                
+              style="pointer-events: all;"/>    
+      </svg>
+    
+</div>
+<div id="guid_6895f64e_84ef_42c9_9726_83d191cf2721" class="hero-element" >GPS Longitude
+</div>
+<div id="guid_3bc8c293_cfbb_440f_99ed_3617a02ca507" class="hero-element" >69 deg 55' 50.64" E
+</div>
+</div>
+<div id="guid_d7730e4e_43a4_4a72_9557_bb792c20bef2" class="hero-element" >
+<img id="guid_77609e83_2d2c_4ca9_bd87_d5cc016c9f5d" class="hero-element" src="guid_77609e83_2d2c_4ca9_bd87_d5cc016c9f5d.png" >
+
+<div id="guid_add9e698_2743_4add_b66a_d68ff5918a37" class="hero-element" >
+<img id="guid_f4f2edd6_a0b4_47d2_996f_e3479ce45582" class="hero-element" src="guid_f4f2edd6_a0b4_47d2_996f_e3479ce45582.png" >
+
+</div>
+</div>
+<div id="guid_a04b2fcb_8265_4f01_aabb_f4f134935dd5" class="hero-element" >
+<div id="guid_c10842af_0acf_4404_928b_a5a611cba464" class="hero-element" >
+</div>
+<div id="guid_799b7de4_035c_446a_b2b5_86475f5d3d46" class="hero-element" >outdoor
+</div>
+</div>
+<div id="guid_e48526a6_9859_463a_9810_85939604cbe4" class="hero-element" >
+<div id="guid_70c4df40_fb60_44a8_ae06_18b67bcb997f" class="hero-element" >
+</div>
+<div id="guid_bbfed187_fb95_4db4_90cf_5efa16a07f0c" class="hero-element" >sky
+</div>
+</div>
+<div id="guid_f99ea00e_53c2_450a_baed_93634f049ad5" class="hero-element" >
+<div id="guid_feb84ecd_bfbd_47ef_8b21_aaee7d601d95" class="hero-element" >
+</div>
+<div id="guid_dc641e6b_93c3_4338_bcf4_19de18b76e88" class="hero-element" >nature
+</div>
+</div>
+<div id="guid_d2c8aba4_acf8_417a_9491_0d8bba4bf2f1" class="hero-element" >
+<div id="guid_d9705e49_6918_4ab9_834b_bb6be47620fb" class="hero-element" >
+</div>
+<div id="guid_521122c0_f29e_4277_a432_11ff524c1e2f" class="hero-element" >joy
+</div>
+</div>
+<div id="guid_af56aaad_d71c_495d_bcaa_89c601940d49" class="hero-element" >
+<div id="guid_22d21c85_cd6b_42ec_a2c5_770d106e1b85" class="hero-element" >
+</div>
+<div id="guid_25bdc607_5b6f_42cf_9110_276308860ef9" class="hero-element" >sunset
+</div>
+</div>
+<div id="guid_b698817d_799c_4fa8_a026_cd4a6f8334b9" class="hero-element" >
+<div id="guid_0c91921e_ccb7_4b8c_88ff_6657204f50e6" class="hero-element" >
+</div>
+<div id="guid_6bc0abb7_5229_4986_bdb5_1b4635787b16" class="hero-element" >nsft
+</div>
+</div>
+<div id="guid_edf5145d_25a7_49fb_b024_11029bf60fe0" class="hero-element" >
+<div id="guid_11fdffdf_5903_4881_9049_ab0438ab4348" class="hero-element" >
+</div>
+<div id="guid_caead300_6779_4b25_9386_683d9e035840" class="hero-element" >landscape
+</div>
+</div>
+<div id="guid_019b24c2_6410_40fa_b6e4_8226e0c4cf9b" class="hero-element" >
+<div id="guid_378759fd_4d37_4bef_aca5_ac39a9dd81f4" class="hero-element" >
+</div>
+<div id="guid_6a92ec8b_8163_4a58_b47e_7c32ca70dbb1" class="hero-element" >beach
+</div>
+</div>
+<div id="guid_19955d57_96b9_4f61_adc6_b0ac1843ca45" class="hero-element" >
+<div id="guid_c9445e0d_8f06_415e_b1bf_e40b655fe721" class="hero-element" >
+</div>
+<div id="guid_74c99bd2_7f13_4987_a3ea_0dd7c945ecaa" class="hero-element" >human
+</div>
+</div>
+<div id="guid_f7f70550_951c_4d31_8d1d_3e4c8b3e8cf2" class="hero-element" >
+</div>
+<div id="guid_edc3dd45_20e5_4049_89cf_42fa662c305c" class="hero-element" >AW343F435V345RG5466H5765YTH67657JH65HH56YH563526B39PM9PV23
+</div>
+<div id="guid_7ce7afaa_93f7_462a_88db_1bfe646a3be6" class="hero-element" >
+<div id="guid_240d50a4_8379_4475_9f8b_a854a83746fa" class="hero-element" >Guide to Application
+</div>
+<div id="guid_cba9094e_1113_4b8f_9957_f23760ba63b3" class="hero-element" >
+<div id="guid_4b99d443_423a_442a_a8a9_53c7f60549dc" class="hero-element" >Step 1 : 
+</div>
+<div id="guid_56ffcc5b_a1b9_43f9_9b21_8c1a46171bf7" class="hero-element" >Allow Gallery permission
+</div>
+</div>
+<div id="guid_ff7820c7_c9f1_4035_99fe_5f2a34e4e04e" class="hero-element" >
+<div id="guid_1236fce3_b665_4941_b38e_a747a8954adc" class="hero-element" >Step 2 : 
+</div>
+<div id="guid_5fdbb42d_4440_438d_b858_a20fa05af4a8" class="hero-element" >Upload an photograph with GPS data available
+</div>
+</div>
+<div id="guid_82765b61_9456_4640_9917_4a8bdff339d1" class="hero-element" >
+<div id="guid_c36a19d9_a776_41d0_83a0_d07fd837b6bf" class="hero-element" >Step 3 : 
+</div>
+<div id="guid_bdc9e932_a37a_4da4_83b7_b9b2f83dca21" class="hero-element" >Tag the photograph with appropriate hashtags
+</div>
+</div>
+<div id="guid_18f1d236_c23e_4180_9554_04bb7db1675c" class="hero-element" >
+<div id="guid_868223a3_a7ae_462c_a0b2_982f3509b87f" class="hero-element" >Step 4 : 
+</div>
+<div id="guid_d40c1e59_06ce_45c1_83a1_a1ab6810ac5d" class="hero-element" >Mint NsFT
+</div>
+</div>
+<div id="guid_51f65a7b_0387_44ae_820d_fc3f73300d7a" class="hero-element" >
+<div id="guid_71a0b3bc_cbd0_459b_86ee_a9be5a1dcc47" class="hero-element" >Marketplace
+</div>
+<div id="guid_f5e1ee98_1a47_412f_b10f_5138e058198d" class="hero-element" >View minted NsFTs and their info
+</div>
+</div>
+<div id="guid_714d9e11_079e_4cc4_96c6_9f75f7151b9e" class="hero-element" >
+<div id="guid_12cc4a11_0f17_41a0_95da_e5228c3a317f" class="hero-element" >Note :
+</div>
+<div id="guid_8516d615_845a_4a85_8530_296e0eb3209a" class="hero-element" >Preferred themes of photographs : Street, outdoor, sky, building, architecture, clouds, <br/>night, portrait, wildlife, food, café, nature, <br/>landscape, indoor, home, b/w, sunset, <br/>sunrise, water, river, beach, hill, mountains, <br/>road and human
+</div>
+</div>
+</div>
+</div>
+              </div>
+            </div> 
+
+
+      
+
+            </div>
+          </div>
+        </div>
+
+      
+
+
+  <!-- Hero/Fusion Player -->
+  <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        window.player = new fusion.Player({
+          id: 'player',
+          // debug: true, 
+          scenes: [
+            
+            { 
+              id: 'guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+            { 
+              id: 'guid_a10393d6_b61c_4499_892b_ec60f40cfaf4', 
+              type: 'flat', 
+              width: 1920, 
+              height: 1080,
+              fit: true, 
+              center: true,
+              plugins: [
+                // {id: 'visualDebugger', options: {centerV: true}},
+              ]
+            },              
+      
+          ]
+        });
+        player.loadScene('guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9');      
+      });
+    
+  </script>
+
+  <!-- Hero Scenes -->
+  <script>
+    
+      //---
+      // Scene: guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9');          
+    
+          //---
+          // guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9 : click
+          (function() {
+            try {
+              var el = document.getElementById('guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9');
+              hero.add( el, 'click', {start: function(element) {
+                // coming soon...
+              }.bind(el)} );
+            } catch (err) {
+              console.log("Error in custom script (guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9 : click) : ", err);
+            }
+          })();
+        
+        }, 1);
+      }); // Scene end    
+    
+      //---
+      // Scene: guid_a10393d6_b61c_4499_892b_ec60f40cfaf4
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function() {
+          var log = console.log;
+          var player = window.player;
+          var scene = window.player.getScene('guid_a10393d6_b61c_4499_892b_ec60f40cfaf4');          
+    
+        }, 1);
+      }); // Scene end    
+    
+  </script>
+
+  <!-- Hero Timelines -->
+  <script>
+    
+    //---
+    // Scene: guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_c8b70a82_4046_4b47_841c_a960ab9cfcd9');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+    //---
+    // Scene: guid_a10393d6_b61c_4499_892b_ec60f40cfaf4
+    document.addEventListener('DOMContentLoaded', function () {
+      var player = window.player;
+      var scene = window.player.getScene('guid_a10393d6_b61c_4499_892b_ec60f40cfaf4');
+      var log = console.log;
+      var tl = gsap.timeline({paused: true});
+      scene.timeline = tl;
+      
+    });
+    
+  </script>
+
+  
+  
+</body>
+</html>
